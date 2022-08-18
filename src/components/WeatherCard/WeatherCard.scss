@@ -1,10 +1,12 @@
 .card {
     display: flex;
     flex-direction: column;
-    margin: 0 5%;
+    margin: 10px 5%;
     width: 90%;
-    background-color: lightblue;
+    background-color: rgb(56, 96, 109);
     border-radius: 40px;
+    border: 1px solid black;
+    color: rgb(238, 234, 234);
     
     &__name {
         padding: 20px 40px
@@ -12,7 +14,6 @@
 
     &__temp {
         padding: 0px 0px 20px 40px;
-        color: rgb(238, 234, 234);
         font-weight: 900;
     }
 

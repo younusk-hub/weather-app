@@ -1,0 +1,36 @@
+
+#Rain {
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100vw;
+	height: 300vh;
+	z-index: -1;
+  background-color: rgb(154, 215, 239);
+}
+
+.droplet {
+	background: rgb(0, 0, 0);
+	width: 1px;
+	height: 89px;
+	position: absolute;
+	bottom: 200px;
+	animation: fall 1.5s  linear  infinite;
+}
+
+@media (max-width: 600px) {
+	#Rain {
+		height: 105vh;
+	}
+}
+
+@keyframes  fall {
+	0% {
+		transform: translate(0, 0) rotate(15deg)
+	}
+	
+	100% {
+		transform: translate(-400px, 1000px) rotate(15deg)
+	}
+}

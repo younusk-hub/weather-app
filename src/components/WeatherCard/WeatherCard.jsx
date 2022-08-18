@@ -1,5 +1,6 @@
 import React from 'react'
 import './WeatherCard.scss'
+import  ObliqueRain  from  'react-rainfall-animation/src/ObliqueRain'
 
 const WeatherCard = ({ weatherData }) => {
 
@@ -29,6 +30,10 @@ const WeatherCard = ({ weatherData }) => {
                 <div className='card__display__info'>
                     <p>Sunrise: {convertTime(weatherData.sys.sunrise)}</p>
                     <p>Sunset: {convertTime(weatherData.sys.sunset)}</p>
+                </div>
+                <div className='card__display__info'>
+                    <p>Description: {weatherData.weather[0].description}</p>
+                    <p>Humidity: {weatherData.main.humidity}</p>
                 </div>
                 
             </div>

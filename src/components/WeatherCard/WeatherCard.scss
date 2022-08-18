@@ -1,0 +1,34 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5%;
+    width: 90%;
+    background-color: lightblue;
+    border-radius: 40px;
+    
+    &__name {
+        padding: 20px 40px
+    }
+
+    &__temp {
+        padding: 0px 0px 20px 40px;
+        color: rgb(238, 234, 234);
+        font-weight: 900;
+    }
+
+    &__display {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__info {
+            padding: 0px 0px 20px 40px;
+            width: 100%;
+            justify-content: space-evenly;
+            
+            p {
+                padding: 5px 5px;
+            }
+        }   
+    }
+}

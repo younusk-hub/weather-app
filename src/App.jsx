@@ -13,7 +13,6 @@ function App() {
   const [status, setStatus] = useState([]);
   const [weather, setWeather] = useState({coord:{lon:-0.3002,lat:51.508},weather:[{id:800,main:"Rain",description:"clear sky",icon:"01d"}],base:"stations",main:{temp:305.21,feels_like:303.71,temp_min:303.15,temp_max:306.6,pressure:1006,humidity:27},visibility:10000,wind:{speed:3.09,deg:100},clouds:{all:0},dt:1660481624,sys:{type:2,id:2010448,country:"GB",sunrise:1660452297,sunset:1660505225},timezone:3600,id:3333145,name:"Ealing",cod:200})
   const [news, setNews] = useState([])
-  // const [dayOrNight, setDayOrNight] = useState('')
   const [animation, setAnimation] = useState('')
   
   const getWeatherData = async () => {
@@ -30,18 +29,18 @@ function App() {
       });
     }
     
-    const key = '2ce74ee18416eb100f12a7a15a4d9e1'
+    const key = '2ce74ee18416eb100f12a7a15a4d9e1f'
     let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${key}`
     const res = await fetch(url)
     const data = await res.json()
-    // setWeather(data)
-    // setAnimation(data.weather[0].main)
+    setWeather(data)
+    setAnimation(data.weather[0].main)
     console.log(data);
   } 
 
   const getNewsData = async () => {
     const key = 'a0176ecaf59b2f64b3a8d9f3655bf4da'
-    let url = `http://api.mediastack.com/v1/news?access_key=${key}&sources=en&country=gb&sort=popularity`
+    let url = `http://api.mediastack.com/v1/news?access_key=${key}&sources=en&country=gb&sort=popularity&limit=5`
     const res = await fetch(url)
     const data = await res.json()
     setNews(data.data)

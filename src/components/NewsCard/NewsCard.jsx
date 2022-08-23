@@ -8,6 +8,7 @@ const NewsCard = ({ newsData }) => {
             <a className='card' href={article.url}>
                 <h1 className='card__title'>{article.title}</h1>
                 <img className='card__image' src={article.image}/>
+                <p className='card__info'>{article.description}</p>
             </a>
         )
     })

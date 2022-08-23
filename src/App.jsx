@@ -55,7 +55,7 @@ function App() {
   return (
     <div className="App">
       {animation === 'Rain' ? (<div id="Rain">
-        <ObliqueRain  dropletsAmount={1000} amplitude={700} />
+        <ObliqueRain  dropletsAmount={1000} amplitude={0} />
       </div>) : (<div id="clear"></div>)}
       <Welcome/>
       <p>{status}</p>

@@ -1,7 +1,7 @@
 #clear { 
 	position: fixed;
 	width: 100vw;
-	height: 300vh;
+	height: 100vh;
 	z-index: -1;
   	background-color: rgb(154, 215, 239);
 }
@@ -34,10 +34,10 @@
 
 @keyframes  fall {
 	0% {
-		transform: translate(-300px, 600px) rotate(15deg)
+		transform: translate(-100px, -2000px) rotate(15deg)
 	}
 	
 	100% {
-		transform: translate(-900px, 2000px) rotate(15deg)
+		transform: translate(-900px, 300px) rotate(15deg)
 	}
 }
